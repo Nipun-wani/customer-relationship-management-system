@@ -74,7 +74,16 @@ This project is a web-based CRM application developed using Java, Servlets, JSP,
 
 
 
-(Add screenshots here later)
+* screenshort/img1.png
+* screenshort/img2.png
+* screenshort/img3.png
+* screenshort/img4.png
+* screenshort/img5.png
+* screenshort/img6.png
+* screenshort/img7.png
+* screenshort/img8.png
+* screenshort/img9.png
+* screenshort/img10.png
 
 
 
