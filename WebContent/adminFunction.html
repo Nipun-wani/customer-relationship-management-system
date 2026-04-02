@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: #fff;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .navbar {
+            width: 250px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .navbar h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 10px 0; /* Added extra margin for spacing between options */
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            background: linear-gradient(45deg, #ff6b6b, #f06595);
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            transform: translateX(5px);
+        }
+        .navbar a i {
+            margin-right: 10px;
+        }
+        .navbar .logout {
+            background-color: red; /* Red background for logout */
+            color: #fff; /* White text color */
+        }
+        .navbar .logout:hover {
+            background-color: #d43f3a; /* Darker red background on hover to match welcome color */
+        }
+        .logout-container {
+            margin-top: auto; /* Pushes the logout link to the bottom */
+            margin-bottom: 20px; /* Adjust this value to move the logout button slightly up */
+        }
+        .container {
+            margin-left: 270px; /* Adjust this according to the width of the sidebar */
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .container .welcome {
+            font-size: 48px;
+            color: red; /* Red color for Welcome text */
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Admin Dashboard</h2>
+        <a href="addCustomer.html">
+            <i class="fas fa-user-plus"></i> Add Customer
+        </a>
+        <a href="viewCustomer.jsp">
+            <i class="fas fa-users"></i> View Customer
+        </a>
+        <a href="addSman.html">
+            <i class="fas fa-user-cog"></i> Add Service Man
+        </a>
+        <a href="viewSman.jsp">
+            <i class="fas fa-users-cog"></i> View Service Man
+        </a>
+        <a href="viewUnsolvedComplaints.jsp">
+            <i class="fas fa-exclamation-circle"></i> View Unsolved Complaints
+        </a>
+        <a href="viewsSolvedComplaints.jsp">
+            <i class="fas fa-check-circle"></i> View Solved Complaints
+        </a>
+        <div class="logout-container">
+            <a href="index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i> Log Out
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <h1><span class="welcome">Welcome</span><br>to the Admin Dashboard</h1>
+        <!-- Add your main content here -->
+    </div>
+</body>
+</html>

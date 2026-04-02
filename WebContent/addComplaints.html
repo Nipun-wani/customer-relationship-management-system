@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Complaint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Soft gradient background */
+        }
+
+        .navbar {
+            width: 250px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            background: linear-gradient(45deg, #ff6b6b, #f06595);
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            transform: translateX(5px);
+        }
+
+        .navbar a i {
+            margin-right: 10px;
+        }
+
+        .navbar .logout {
+            background-color: red;
+            color: #fff;
+        }
+
+        .navbar .logout:hover {
+            background-color: #d43f3a;
+        }
+
+        .logout-container {
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+        .main-content {
+            margin-left: 250px; /* Adjusted margin to accommodate the fixed navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 250px);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ff6b6b; /* Same color as navbar options */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="text"], input[type="date"], input[type="time"], input[type="submit"] {
+            width: calc(100% - 40px);
+            padding: 12px;
+            margin: 10px auto;
+            border: 2px solid #ff6b6b; /* Border color same as navbar options */
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="submit"]:focus {
+            border-color: #f06595;
+            box-shadow: 0 0 10px rgba(240, 101, 149, 0.5);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(45deg, #ff6b6b, #f06595); /* Same gradient color as navbar options */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 10px 15px; /* Adjusted padding */
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f06595; /* Slightly lighter on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff6b6b; /* Same color as navbar options */
+        }
+
+        input[type="text"], input[type="date"], input[type="time"] {
+            padding-left: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .container {
+                width: 90%; /* Responsive width */
+                padding: 40px; /* Reduced padding on smaller screens */
+            }
+            .navbar {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Customer Dashboard</h2>
+        <a href="addComplaints.html">
+            <i class="fas fa-plus-circle"></i> Add Complaints
+        </a>
+        <a href="customerUnsolvedComplaints.jsp">
+            <i class="fas fa-exclamation-circle"></i> View Unsolved Complaints
+        </a>
+        <a href="customerSolvedComplaints.jsp">
+            <i class="fas fa-check-circle"></i> View Solved Complaints
+        </a>
+        <a href="customerChangePassword.html">
+            <i class="fas fa-key"></i> Change Password
+        </a>
+        <div class="logout-container">
+            <a href="index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i> Log Out
+            </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <h1>Add Complaint</h1>
+            
+            <form action="AddComplaints" method="post">
+            
+                <div class="form-group">
+                    <i class="fas fa-heading"></i>
+                    <input type="text" name="title" placeholder="Enter Title" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-align-left"></i>
+                    <input type="text" name="detail" placeholder="Enter in detail" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="text" name="contact" placeholder="Enter Contact" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" name="address" placeholder="Enter address" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" name="date" placeholder="Enter Date" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-clock"></i>
+                    <input type="time" name="time" placeholder="Enter Time" required>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

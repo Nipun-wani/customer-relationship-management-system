@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            transition: background 1s ease;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Soft gradient background */
+        }
+
+        form {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px; /* Increased padding */
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 400px; /* Set a wider width for the form */
+        }
+
+        form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-container {
+            position: relative;
+            margin: 15px 0; /* Increased margin for more spacing */
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px 10px 10px 40px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+            font-size: 1.2em;
+            transition: border-color 0.3s;
+        }
+
+        .input-container::before {
+            content: attr(data-icon);
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #4a90e2;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #4a90e2; /* Highlight border on focus */
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ab8;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="submit"]:active {
+            background-color: #2d5f90;
+        }
+
+        /* Additional styling for responsiveness */
+        @media (max-width: 480px) {
+            form {
+                width: 90%; /* Make the container responsive */
+                padding: 40px 20px; /* Adjust padding */
+            }
+
+            h1 {
+                font-size: 2em; /* Adjust font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="LoginCustomer" method="post">
+        <h1>Customer Login</h1>
+        <div class="input-container" data-icon="👤">
+            <input type="text" name="id" placeholder="Enter User id" required>
+        </div>
+        <div class="input-container" data-icon="🔒">
+            <input type="password" name="password" placeholder="Enter User password" required>
+        </div>
+        <input type="submit" value="Login" data-icon="🔑">
+    </form>
+
+    <script>
+        const colors = [
+            '#ff6b6b', '#f0e68c', '#87cefa', '#ffb6c1',
+            '#98fb98', '#ffa07a', '#e0ffff', '#ff69b4'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.background = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        setInterval(changeBackground, 3000);
+        changeBackground();
+    </script>
+</body>
+</html>

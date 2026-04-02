@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            transition: background 1s ease;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 30px;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .link {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #4a90e2;
+            padding: 15px 30px;
+            margin: 15px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .link:hover {
+            background-color: #357ab8;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .link:active {
+            background-color: #2d5f90;
+        }
+
+        #quote {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting">Welcome</h1>
+        <a href="admin_login.html" class="link">Admin</a>
+        <a href="smanLogin.html" class="link">Service Man</a>
+        <a href="customer_login.html" class="link">Customer</a>
+        <div id="quote"></div>
+    </div>
+    <script>
+        const colors = [
+            '#ff6b6b', '#f0e68c', '#87cefa', '#ffb6c1',
+            '#98fb98', '#ffa07a', '#e0ffff', '#ff69b4'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.background = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        // Change background every 3 seconds
+        setInterval(changeBackground, 3000);
+        changeBackground(); // Initial call to set first color
+
+        function updateGreeting() {
+            const greetingElement = document.getElementById("greeting");
+            const currentHour = new Date().getHours();
+            if (currentHour < 12) {
+                greetingElement.textContent = "Good Morning!";
+            } else if (currentHour < 18) {
+                greetingElement.textContent = "Good Afternoon!";
+            } else {
+                greetingElement.textContent = "Good Evening!";
+            }
+        }
+
+        function displayRandomQuote() {
+            const quotes = [
+                "The best way to predict the future is to create it.",
+                "You are never too old to set another goal or to dream a new dream.",
+                "Success is not the key to happiness. Happiness is the key to success.",
+                "Believe you can and you're halfway there.",
+                "Act as if what you do makes a difference. It does."
+            ];
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        }
+
+        // Update greeting and display random quote on page load
+        updateGreeting();
+        displayRandomQuote();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# ===== Eclipse =====
+.metadata/
+.settings/
+.project
+.classpath
+
+# ===== Build folders =====
+/build/
+/bin/
+/target/
+
+# ===== Java compiled files =====
+*.class
+
+# ===== Logs =====
+*.log
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== IDEs =====
+.idea/
+*.iml
+.vscode/
+
+# ===== Node (if using frontend tools) =====
+node_modules/
+
+# ===== Environment files =====
+.env
+
+# ===== Temporary files =====
+*.tmp
+*.bak
+*.swp
