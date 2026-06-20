@@ -1,5 +1,4 @@
-\# CRM for ISP (Internet Service Operations Portal)
-\# Internet Service Operations Portal
+\# Internet Service Operations Portal (CRM for ISP)
 
 
 
