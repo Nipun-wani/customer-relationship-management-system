@@ -1,97 +1,139 @@
-\# Internet Service Operations Portal (CRM for ISP)
+# 🌐 Internet Service Operations Portal (CRM for ISP)
 
+## 📌 Overview
 
+The Internet Service Operations Portal is a full-stack web application developed to help Internet Service Providers (ISPs) efficiently manage customers, service requests, and complaint resolution.
 
-\## 📌 Project Description
+The application provides a centralized platform for administrators to register customers, assign complaints to service personnel, track complaint status, and manage overall service operations. It reduces manual effort, improves response time, and streamlines customer support workflows.
 
+---
 
+## ✨ Key Features
 
-This project is a web-based CRM application developed using Java, Servlets, JSP, and JDBC to manage customer data, complaints, and service operations for an Internet Service Provider (ISP). It helps streamline complaint handling and improves overall service efficiency.
+- 🔐 Secure Admin Login
+- 👥 Customer Registration & Management
+- 📝 Complaint Registration
+- 🔄 Complaint Status Tracking
+- 👨‍🔧 Service Personnel Management
+- 📊 Centralized Customer & Complaint Records
+- 💾 MySQL Database Integration using JDBC
 
+---
 
+## 🛠️ Tech Stack
 
-\## 🚀 Features
+### Backend
+- Java
+- Servlets
+- JSP
+- JDBC
 
+### Frontend
+- HTML
+- CSS
+- JavaScript
 
+### Database
+- MySQL
 
-\* Admin login system
+### Server
+- Apache Tomcat
 
-\* Customer registration and management
+### Development Tools
+- Eclipse IDE
+- MySQL Workbench
 
-\* Complaint registration and tracking
+---
 
-\* Complaint status update
+## 📂 Project Structure
 
-\* Serviceman management
+```
+Internet-Service-Operations-Portal/
+│
+├── src/                 # Java source files (Servlets, DAO, Model)
+├── WebContent/          # JSP pages, HTML, CSS, JavaScript
+├── database.sql         # Database schema
+└── README.md
+```
 
-\* Database connectivity using JDBC
+---
 
+## ⚙️ Getting Started
 
+### Prerequisites
 
-\## 🛠️ Tech Stack
+- Java JDK 8 or above
+- Apache Tomcat
+- MySQL Server
+- Eclipse IDE (Recommended)
 
+### Installation
 
+1. Clone the repository
 
-\* Java (Servlets, JSP)
+```bash
+git clone https://github.com/your-username/repository-name.git
+```
 
-\* JDBC
+2. Import the project into Eclipse.
 
-\* MySQL
+3. Create a MySQL database using the provided `database.sql` script.
 
-\* HTML, CSS, JavaScript
+4. Update the database username and password in the JDBC connection file.
 
+5. Configure Apache Tomcat.
 
+6. Run the project.
 
-\## 🗂️ Project Structure
+---
 
+## 📷 Screenshots
 
+### Login Page
+![Login](screenshort/img1.png)
 
-\* src/ → Java source code (Servlets, DAO, Model)
+### Admin Dashboard
+![Dashboard](screenshort/img2.png)
 
-\* WebContent/ → JSP pages and frontend files
+### Customer Registration
+![Customer Registration](screenshort/img3.png)
 
-\* database.sql → Database schema
+### Complaint Registration
+![Complaint Registration](screenshort/img4.png)
 
+### Complaint Management
+![Complaint Management](screenshort/img5.png)
 
+### Complaint Status
+![Complaint Status](screenshort/img6.png)
 
-\## ⚙️ How to Run
+### Service Personnel Management
+![Service Personnel](screenshort/img7.png)
 
+### Customer Records
+![Customer Records](screenshort/img8.png)
 
+### Complaint Records
+![Complaint Records](screenshort/img9.png)
 
-1\. Import project into Eclipse
+### Database Overview
+![Database](screenshort/img10.png)
 
-2\. Configure Apache Tomcat server
+---
 
-3\. Setup MySQL database using SQL script
+## 🎯 Learning Outcomes
 
-4\. Update database credentials in code
+Through this project, I gained practical experience in:
 
-5\. Run project on server
+- Building dynamic web applications using Java Servlets and JSP
+- Implementing CRUD operations with JDBC
+- Designing relational databases using MySQL
+- Following the MVC architecture
+- Managing user authentication and session handling
+- Developing responsive user interfaces using HTML, CSS, and JavaScript
 
+---
 
+## 👨‍💻 Author
 
-\## 📷 Screenshots
-
-
-
-* screenshort/img1.png
-* screenshort/img2.png
-* screenshort/img3.png
-* screenshort/img4.png
-* screenshort/img5.png
-* screenshort/img6.png
-* screenshort/img7.png
-* screenshort/img8.png
-* screenshort/img9.png
-* screenshort/img10.png
-
-
-
-\## 👨‍💻 Author
-
-
-
-Nipun Wani
-
-
-
+**Nipun Wani**
