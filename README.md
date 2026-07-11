@@ -1,22 +1,26 @@
-# 🌐 Internet Service Operations Portal (CRM for ISP)
+# 🌐 Internet Service Operations Portal
 
-## 📌 Overview
-
-The Internet Service Operations Portal is a full-stack web application developed to help Internet Service Providers (ISPs) efficiently manage customers, service requests, and complaint resolution.
-
-The application provides a centralized platform for administrators to register customers, assign complaints to service personnel, track complaint status, and manage overall service operations. It reduces manual effort, improves response time, and streamlines customer support workflows.
+A full-stack web application developed for **Internet Service Providers (ISPs)** to streamline customer management, complaint handling, and service operations. The system enables administrators to register customers, manage service requests, assign complaints to service personnel, and track complaint resolution through a centralized platform.
 
 ---
 
-## ✨ Key Features
+## 📌 Project Overview
 
-- 🔐 Secure Admin Login
+The Internet Service Operations Portal simplifies the day-to-day operations of an Internet Service Provider by providing an integrated platform for customer registration, complaint management, and service request tracking. It reduces manual effort, improves response time, and enhances the overall customer support process.
+
+---
+
+## ✨ Features
+
+- 🔐 Secure Admin Authentication
 - 👥 Customer Registration & Management
 - 📝 Complaint Registration
-- 🔄 Complaint Status Tracking
 - 👨‍🔧 Service Personnel Management
-- 📊 Centralized Customer & Complaint Records
+- 🔄 Complaint Assignment & Status Tracking
+- 📋 View Customer Records
+- 📄 View Complaint Records
 - 💾 MySQL Database Integration using JDBC
+- 🌐 Dynamic Web Application using Servlets and JSP
 
 ---
 
@@ -47,93 +51,143 @@ The application provides a centralized platform for administrators to register c
 
 ## 📂 Project Structure
 
-```
-Internet-Service-Operations-Portal/
+```text
+Internet-Service-Operations-Portal
 │
-├── src/                 # Java source files (Servlets, DAO, Model)
-├── WebContent/          # JSP pages, HTML, CSS, JavaScript
-├── database.sql         # Database schema
+├── src
+│   ├── controller
+│   ├── dao
+│   ├── model
+│   └── utility
+│
+├── WebContent
+│   ├── css
+│   ├── js
+│   ├── images
+│   └── jsp
+│
+├── database.sql
 └── README.md
 ```
 
 ---
 
-## ⚙️ Getting Started
+## ⚙️ Installation & Setup
 
 ### Prerequisites
 
-- Java JDK 8 or above
+- Java JDK 8 or later
 - Apache Tomcat
 - MySQL Server
 - Eclipse IDE (Recommended)
 
-### Installation
+### Steps to Run
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/repository-name.git
+git clone https://github.com/your-username/internet-service-operations-portal.git
 ```
 
 2. Import the project into Eclipse.
 
-3. Create a MySQL database using the provided `database.sql` script.
+3. Create the MySQL database using the provided SQL script.
 
-4. Update the database username and password in the JDBC connection file.
+4. Configure the database connection in the JDBC utility class.
 
-5. Configure Apache Tomcat.
+5. Deploy the project on Apache Tomcat.
 
-6. Run the project.
+6. Start the server and access the application through your browser.
 
 ---
 
-## 📷 Screenshots
+## 📷 Application Screenshots
 
 ### Login Page
+
 ![Login](screenshort/img1.png)
 
+---
+
 ### Admin Dashboard
+
 ![Dashboard](screenshort/img2.png)
 
+---
+
 ### Customer Registration
+
 ![Customer Registration](screenshort/img3.png)
 
+---
+
 ### Complaint Registration
+
 ![Complaint Registration](screenshort/img4.png)
 
+---
+
 ### Complaint Management
+
 ![Complaint Management](screenshort/img5.png)
 
-### Complaint Status
+---
+
+### Complaint Status Tracking
+
 ![Complaint Status](screenshort/img6.png)
 
+---
+
 ### Service Personnel Management
+
 ![Service Personnel](screenshort/img7.png)
 
+---
+
 ### Customer Records
+
 ![Customer Records](screenshort/img8.png)
 
+---
+
 ### Complaint Records
+
 ![Complaint Records](screenshort/img9.png)
 
+---
+
 ### Database Overview
+
 ![Database](screenshort/img10.png)
 
 ---
 
-## 🎯 Learning Outcomes
+## 🎯 Key Learning Outcomes
 
-Through this project, I gained practical experience in:
+- Developed a dynamic web application using Java Servlets and JSP.
+- Implemented CRUD operations using JDBC and MySQL.
+- Applied the MVC (Model-View-Controller) architecture.
+- Implemented session-based authentication and authorization.
+- Designed and managed a relational database.
+- Improved understanding of enterprise Java web application development.
 
-- Building dynamic web applications using Java Servlets and JSP
-- Implementing CRUD operations with JDBC
-- Designing relational databases using MySQL
-- Following the MVC architecture
-- Managing user authentication and session handling
-- Developing responsive user interfaces using HTML, CSS, and JavaScript
+---
+
+## 🚀 Future Enhancements
+
+- Spring Boot Migration
+- Spring Security Integration
+- REST API Support
+- Email Notifications
+- Dashboard Analytics
+- Role-Based Access Control
+- JWT Authentication
 
 ---
 
 ## 👨‍💻 Author
 
 **Nipun Wani**
+
+GitHub: https://github.com/Nipun-wani
